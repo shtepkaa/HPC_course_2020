@@ -9,7 +9,7 @@ int main()
 
     double x, pi, sum = 0.0;
 
-    step = 1. / (double)N;
+    step = 1 / (double)N;
 
 #pragma omp parallel private(i,x) 
     {
