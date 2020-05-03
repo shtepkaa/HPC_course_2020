@@ -62,7 +62,7 @@ void shiftPPM(PPMImage &img)
 {
     int n = 0;
 
-    for (int shift = 0; shift < 900; shift ++)
+    for (int shift = 0; shift < 300; shift ++)
     {
         #pragma omp parallel for shared(img) private(row,column) 
         
