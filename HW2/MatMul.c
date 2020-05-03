@@ -82,7 +82,6 @@ int main()
     gettimeofday(&tv1, &tz);
 
 
-//  matrix multiplication algorithm
     #pragma omp parallel for private(i,j,n) shared(A,B,C)
     for (i = 0; i < N; i++)
     {    
@@ -94,11 +93,10 @@ int main()
 
     }
 
-    end = omp_get_wtime(); //clock();
+    end = omp_get_wtime(); 
     gettimeofday(&tv2, &tz);
     
     printf("Time elapsed (ijn): %f seconds.\n", (double) (tv2.tv_sec-tv1.tv_sec) + (double) (tv2.tv_usec-tv1.tv_usec) * 1.e-6);
-    //printf("Time elapsed (ijn)_old: %f seconds.\n", (end - start) / CLOCKS_PER_SEC);
     printf("Time elapsed (ijn)_omp_get_wtime: %f seconds.\n~", (double)(end - start));
     
     zero_init_matrix(C, N);
