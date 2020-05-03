@@ -47,7 +47,6 @@ int main (int argc, char *argv[])
 
     sum = 0.0;
 
-    //#pragma omp parallel shared(sum)
     sum = dotprod(a, b, N, threads);
 
     printf("Sum = %f\n",sum);
