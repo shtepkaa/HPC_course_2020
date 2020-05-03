@@ -7,7 +7,7 @@ void array_filled(float **array, const int n)
 {
 	*array = (float *) malloc(n*sizeof(float));
 
-	for (int i = 0; i < n*n; i++) 
+	for (int i = 0; i < n; i++) 
     {
 		(*array)[i] = ((float)rand()/(float)(RAND_MAX))*100;
 	}
