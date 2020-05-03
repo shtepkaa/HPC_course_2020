@@ -35,16 +35,14 @@ int main (int argc, char *argv[])
     
     int i;
     float sum;
-    //float a[N], b[N];
-	float *a, *b;
+    float *a, *b;
 
     a = (float*) malloc (threads*N*sizeof(float));
-	b = (float*) malloc (threads*N*sizeof(float));
+    b = (float*) malloc (threads*N*sizeof(float));
 
     for (i = 0; i < threads*N; ++i)
     {
         a[i] = b[i] = (double)i;
-        //a[i] = b[i] = 1.0;
     }
 
     sum = 0.0;
