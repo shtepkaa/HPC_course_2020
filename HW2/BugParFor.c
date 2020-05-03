@@ -17,11 +17,6 @@ int main (int argc, char *argv[])
     }
 
 
-/*#pragma omp parallel \
-    shared(a,b,c,chunk) \
-    private(i,tid) \
-    schedule(static,chunk)*/
-
     #pragma omp parallel private(i,tid) num_threads(threads)
     {
         tid = omp_get_thread_num();
